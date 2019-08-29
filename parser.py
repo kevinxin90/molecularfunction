@@ -2,7 +2,7 @@ import requests
 
 
 def load_data(data_folder=None):
-    url = 'http://mygene.info/v3/query?q=_exists_:go.BP&fields=go.BP&fetch_all=TRUE'
+    url = 'http://mygene.info/v3/query?q=_exists_:go.MF&fields=go.MF&fetch_all=TRUE'
     cnt = 0
     total = 1
     pathway_ids = set()
@@ -12,7 +12,7 @@ def load_data(data_folder=None):
         cnt += len(doc['hits'])
         url = 'http://mygene.info/v3/query?scroll_id=' + doc['_scroll_id']
         for _doc in doc['hits']:
-            info = _doc['go']['BP']
+            info = _doc['go']['MF']
             if isinstance(info, dict):
                 info = [info]
             for record in info:
