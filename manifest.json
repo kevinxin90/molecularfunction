@@ -1,0 +1,12 @@
+{
+    "version": "0.1",
+    "__metadata__" : {
+        "license_url" : "https://www.mygene.info",
+        "licence" : "CC BY-NC 4.0",
+        "url" : "https://www.mygene.info"
+    },
+    "uploader" : {
+        "parser" : "parser:load_data",
+        "on_duplicates" : "ignore"
+    }
+}
